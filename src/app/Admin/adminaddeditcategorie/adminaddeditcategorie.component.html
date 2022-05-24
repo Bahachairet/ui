@@ -1,0 +1,29 @@
+<form>
+    <div class="md-4">
+        <label for="categName" class="form-label">Categorie Title</label>
+        
+         <input type="text" class="form-control" [(ngModel)]="categName" name="categName">
+    
+    </div>
+    <div class="md-4">
+        <label for="categImg" class="form-label">Categorie Image</label>
+        <!-- <input type="text" class="form-control" name="gigTitle" [(ngModel)]="gigTitle"
+         *ngIf="gig.gigId!=0" disabled> -->
+         <input type="text" class="form-control" [(ngModel)]="categImg" name="categImg">
+    
+    </div>
+    <div class="md-4">
+        <label for="categdes" class="form-label">Categorie Detail</label>
+        <!-- <input type="text" class="form-control" name="gigTitle" [(ngModel)]="gigTitle"
+         *ngIf="gig.gigId!=0" disabled> -->
+         <input type="text" class="form-control" [(ngModel)]="categdes" name="categdes">
+    
+    </div>
+   
+    <button (click)="addGig()" *ngIf="categ.categId==0" class="btn btn-primary">
+        Add
+    </button>
+    <button (click)="updateGig()" *ngIf="categ.categId!=0" class="btn btn-primary">
+    Update
+    </button>
+    </form>

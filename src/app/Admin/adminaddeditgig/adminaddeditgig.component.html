@@ -1,0 +1,42 @@
+<form>
+    <div class="md-4">
+        <label for="gigTitle" class="form-label">Gig Title</label>
+        
+         <input type="text" class="form-control" [(ngModel)]="gigTitle" name="gigTitle">
+    
+    </div>
+    <div class="md-4">
+        <label for="gigDisc" class="form-label">Gig Description</label>
+        <!-- <input type="text" class="form-control" name="gigTitle" [(ngModel)]="gigTitle"
+         *ngIf="gig.gigId!=0" disabled> -->
+         <input type="text" class="form-control" [(ngModel)]="gigDisc" name="gigDisc">
+    
+    </div>
+    <div class="md-4">
+        <label for="gigDetail" class="form-label">Gig Detail</label>
+        <!-- <input type="text" class="form-control" name="gigTitle" [(ngModel)]="gigTitle"
+         *ngIf="gig.gigId!=0" disabled> -->
+         <input type="text" class="form-control" [(ngModel)]="gigDetail" name="gigDetail">
+    
+    </div>
+    <div class="md-4">
+        <label for="gigPhoto" class="form-label">Gig Photo</label>
+        <!-- <input type="text" class="form-control" name="gigTitle" [(ngModel)]="gigTitle"
+         *ngIf="gig.gigId!=0" disabled> -->
+         <input type="text" class="form-control" [(ngModel)]="gigPhoto" name="gigPhoto">
+    
+    </div>
+    <div class="md-4">
+        <label for="gigPrice" class="form-label">Gig Price</label>
+        <!-- <input type="text" class="form-control" name="gigTitle" [(ngModel)]="gigTitle"
+         *ngIf="gig.gigId!=0" disabled> -->
+         <input type="number" class="form-control" [(ngModel)]="gigPrice" name="gigPrice">
+    
+    </div>
+    <button (click)="addGig()" *ngIf="Gig.gigId==0" class="btn btn-primary">
+        Add
+    </button>
+    <button (click)="updateGig()" *ngIf="Gig.gigId!=0" class="btn btn-primary">
+    Update
+    </button>
+    </form>
